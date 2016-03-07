@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@mipmap/assigned_school_icon"/>
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/school_classify_item_count"
+            android:gravity="center"
+            android:textColor="#6DFFEC"
+            android:layout_marginRight="6dp"
+            tools:text="2"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        tools:text="@string/assigned_schools"/>
+
+</LinearLayout>
