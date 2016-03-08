@@ -1,6 +1,5 @@
 package com.greatschool.android.ui.search;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
