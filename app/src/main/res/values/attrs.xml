@@ -4,6 +4,8 @@
         <attr name="typeface" format="enum">
             <enum name="none" value="-1"/>
             <enum name="proxima_nova_bold" value="0"/>
+            <enum name="proxima_nova_semibold" value="1"/>
+            <enum name="proxima_nova_regular" value="2"/>
         </attr>
     </declare-styleable>
 

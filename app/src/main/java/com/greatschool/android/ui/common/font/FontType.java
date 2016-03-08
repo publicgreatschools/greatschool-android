@@ -2,15 +2,9 @@ package com.greatschool.android.ui.common.font;
 
 public enum FontType {
 
-    AVENIR_BLACK("fonts/avenir_black.otf"),
-    AVENIR_BOOK("fonts/avenir_book.otf"),
-    AVENIR_ROMAN("fonts/avenir_roman.otf"),
-    AVENIR_MED("fonts/brandon_med.otf"),
-    AVENIR_REG("fonts/brandon_reg.otf"),
-    LATO_BOLD("fonts/lato_bold.otf"),
-    LATO_LIGHT("fonts/lato_light.otf"),
-    LATO_REGULAR("fonts/lato_regular.otf"),
-    ROBOTO_MEDIUM("fonts/roboto_medium.ttf");
+    PROXIMA_BOLD("fonts/proxima_nova_bold.otf"),
+    PROXIMA_SEMIBOLD("fonts/proxima_nova_semibold.otf"),
+    PROXIMA_REGULAR("fonts/proxima_nova_regular.otf");
 
     final String assetUrl;
 

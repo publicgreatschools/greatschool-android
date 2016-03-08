@@ -2,15 +2,16 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="100dp"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="2dp"
         android:src="@mipmap/nearby_title"/>
 
     <LinearLayout
@@ -18,38 +19,43 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:paddingBottom="40dp"
-        android:paddingTop="40dp">
+        android:paddingBottom="43dp"
+        android:paddingTop="43dp">
 
         <TextView
+            android:id="@+id/school_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="30"
             android:textColor="@android:color/white"
             android:textSize="100sp"/>
 
-        <TextView
+        <com.greatschool.android.ui.common.font.TypefacedTextView
             android:id="@+id/school_des"
-            android:textSize="14sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            font:typeface="proxima_nova_bold"/>
 
-        <Button
+        <com.greatschool.android.ui.common.font.TypefacedButton
             android:id="@+id/explore"
-            android:layout_width="180dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="15dp"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/explore_selector"
             android:gravity="center_horizontal"
-            android:paddingTop="13dp"
+            android:paddingTop="10dp"
             android:text="@string/explore"
-            android:textColor="@android:color/white"/>
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            font:typeface="proxima_nova_bold"/>
 
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
+        android:layout_marginTop="42dp"
         android:background="@mipmap/line"></View>
 
 
@@ -57,19 +63,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:paddingBottom="15dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="15dp">
 
-        <TextView
+        <com.greatschool.android.ui.common.font.TypefacedTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/article"
             android:textColor="#7FFFFFFF"
-            android:textSize="14sp"/>
+            android:textSize="12sp"
+            font:typeface="proxima_nova_bold"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="8dp">
 
 
             <ImageView
@@ -79,24 +89,27 @@
                 android:layout_alignParentRight="true"
                 android:src="@mipmap/arrow"/>
 
-            <TextView
+            <com.greatschool.android.ui.common.font.TypefacedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="30dp"
+                android:layout_marginRight="80dp"
                 android:layout_toLeftOf="@id/arrow"
                 android:text="@string/article_desc"
                 android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textSize="14sp"
+                android:textStyle="bold"
+                font:typeface="proxima_nova_semibold"/>
 
         </RelativeLayout>
 
-        <TextView
+        <com.greatschool.android.ui.common.font.TypefacedTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             android:text="@string/content_by"
-            android:textColor="#7FFFFFFF"/>
+            android:textColor="#7FFFFFFF"
+            android:textSize="12sp"
+            font:typeface="proxima_nova_regular"/>
 
     </LinearLayout>
 
