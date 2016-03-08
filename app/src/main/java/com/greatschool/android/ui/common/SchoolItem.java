@@ -3,6 +3,8 @@ package com.greatschool.android.ui.common;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -45,7 +47,7 @@ public class SchoolItem extends RelativeLayout {
         }
     }
 
-    public void create(School school) {
+    public SchoolItem create(School school) {
         mSchoolName.setText(school.getName());
         mSchoolInfo.setText(school.getInfo());
 
@@ -61,5 +63,40 @@ public class SchoolItem extends RelativeLayout {
         }
 
         mRatingBar.setRating((float) school.getScore() / 2);
+
+        return this;
+    }
+
+
+    public void startAnimation() {
+        setVisibility(VISIBLE);
+        Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.fade_in);
+        animation.setDuration(300);
+        animation.setFillAfter(true);
+        this.startAnimation(animation);
+    }
+
+    public void cancelAnimation() {
+        setVisibility(VISIBLE);
+        Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.fade_out);
+        animation.setDuration(300);
+        animation.setFillAfter(true);
+        this.startAnimation(animation);
+        animation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                setVisibility(GONE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
     }
 }

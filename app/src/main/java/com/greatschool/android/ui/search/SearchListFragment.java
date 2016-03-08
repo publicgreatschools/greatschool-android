@@ -1,17 +1,14 @@
 package com.greatschool.android.ui.search;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import com.greatschool.android.Application;
 import com.greatschool.android.R;
@@ -33,15 +30,21 @@ public class SearchListFragment extends TabbedFragment {
 
     private RecyclerView mRecyclerView;
     private SchoolAdapter mSchoolAdapter;
-    private ViewGroup mMapLayout;
-    private Handler mHandler = new Handler(Looper.getMainLooper());
-    private ImageView mMapImage;
+
     private SearchSortType mSearchSortType;
 
     private List<School> mSchoolList = new ArrayList<>();
 
+    private String mSearchInfo;
+
     public void setSearchSortType(SearchSortType searchSortType) {
         mSearchSortType = searchSortType;
+    }
+
+    public void setSearchInfo(String searchInfo) {
+        mSearchInfo = searchInfo;
+
+        loadData();
     }
 
     @Override
@@ -92,7 +95,7 @@ public class SearchListFragment extends TabbedFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.distance, container, false);
+        return inflater.inflate(R.layout.search_list, container, false);
     }
 
     @Override
@@ -106,15 +109,21 @@ public class SearchListFragment extends TabbedFragment {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerView.setAdapter(mSchoolAdapter);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        mMapLayout = (ViewGroup) view.findViewById(R.id.map);
-        mMapLayout.setVisibility(View.GONE);
-        mMapImage = (ImageView) view.findViewById(R.id.map_image);
     }
 
     private void loadData() {
+        List<School> schoolList;
 
-        List<School> schoolList = Arrays.asList(Application.getInstance().getSchools());
-
+        if (!TextUtils.isEmpty(mSearchInfo)) {
+            schoolList = new ArrayList<>();
+            for (School school : Application.getInstance().getSchools()) {
+                if (school.getName().toLowerCase().contains(mSearchInfo.toLowerCase())) {
+                    schoolList.add(school);
+                }
+            }
+        } else {
+            schoolList = Arrays.asList(Application.getInstance().getSchools());
+        }
 
         Collections.sort(schoolList, new Comparator<School>() {
             @Override
@@ -136,35 +145,5 @@ public class SearchListFragment extends TabbedFragment {
         mSchoolList.clear();
         mSchoolList.addAll(schoolList);
         mSchoolAdapter.notifyDataSetChanged();
-    }
-
-    public void hideOrShowMap(boolean showMap) {
-        if (showMap) {
-            mMapLayout.setVisibility(View.VISIBLE);
-            mRecyclerView.setVisibility(View.GONE);
-
-            mHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    simulateCoordinates();
-                }
-            }, 1000);
-        } else {
-            mMapLayout.setVisibility(View.GONE);
-            mRecyclerView.setVisibility(View.VISIBLE);
-        }
-    }
-
-
-    private void simulateCoordinates() {
-        float x = mMapImage.getX();
-        float y = mMapImage.getY();
-        float width = mMapImage.getWidth();
-        float height = mMapImage.getHeight();
-
-        Log.d(TAG, "x: " + x);
-        Log.d(TAG, "y: " + y);
-        Log.d(TAG, "width: " + width);
-        Log.d(TAG, "height: " + height);
     }
 }
