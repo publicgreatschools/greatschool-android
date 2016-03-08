@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:font="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingLeft="10dp"
@@ -13,12 +14,13 @@
         android:src="@mipmap/search_menu"/>
 
 
-    <TextView
+    <com.greatschool.android.ui.common.font.TypefacedTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="@string/search"
         android:textColor="@android:color/white"
+        font:typeface="proxima_nova_semibold"
         android:textSize="14sp"/>
 
     <ImageView
