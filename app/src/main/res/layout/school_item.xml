@@ -1,46 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:font="http://schemas.android.com/apk/res-auto"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="105dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/school_item"
-                android:orientation="vertical"
-                android:padding="20dp">
-
+                android:background="@drawable/school_item">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:gravity="center_vertical"
         android:orientation="vertical">
 
-        <TextView
+        <com.greatschool.android.ui.common.font.TypefacedTextView
             android:id="@+id/school_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
-            android:textSize="20dp"
+            android:textSize="16dp"
+            font:typeface="proxima_nova_semibold"
             tools:text="School Name A"/>
 
-        <TextView
+        <com.greatschool.android.ui.common.font.TypefacedTextView
             android:id="@+id/school_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="6dp"
             android:textColor="#8593A2"
+            android:textSize="12sp"
+            font:typeface="proxima_nova_regular"
             tools:text="Public | 9 - 12 | Pleasant Hill, CA"/>
 
 
-        <TextView
+        <com.greatschool.android.ui.common.font.TypefacedTextView
             android:id="@+id/school_distance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="6dp"
             android:textColor="#8593A2"
+            android:textSize="12sp"
+            font:typeface="proxima_nova_regular"
             tools:text="3.25 Miles">
-        </TextView>
+        </com.greatschool.android.ui.common.font.TypefacedTextView>
     </LinearLayout>
 
 
@@ -48,31 +53,36 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
         android:gravity="center"
         android:orientation="vertical">
 
-        <TextView
+        <com.greatschool.android.ui.common.font.TypefacedTextView
             android:id="@+id/school_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
             android:background="@mipmap/school_score_green"
+            android:gravity="center"
             android:textColor="@android:color/white"
-            android:textSize="30sp"
-            android:gravity="center"/>
+            android:textSize="24sp"
+            font:typeface="proxima_nova_semibold"/>
 
         <RatingBar
             android:id="@+id/school_rating"
             style="@style/CustomRatingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="6dp"
             android:isIndicator="true"
             android:numStars="5"/>
 
-        <TextView
+        <com.greatschool.android.ui.common.font.TypefacedTextView
             android:id="@+id/review_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textSize="10dp"
+            font:typeface="proxima_nova_regular"
             tools:text="314 reviews"/>
 
     </LinearLayout>

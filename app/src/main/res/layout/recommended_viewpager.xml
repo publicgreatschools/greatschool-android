@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:font="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="300dp"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@mipmap/overlay3"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="18dp"
+            android:background="@mipmap/overlay2"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
+            android:background="@mipmap/overlay1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:text="@string/easy_learning"
+                android:textColor="#585859"
+                android:textSize="12sp"
+                font:typeface="proxima_nova_semibold"/>
+
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="15dp"
+                android:background="#0DA7E3"></View>
+
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="@string/easy_learning_info"
+                android:textColor="#1C252E"
+                android:textSize="16sp"
+                font:typeface="proxima_nova_semibold"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/circle_line"/>
+</LinearLayout>

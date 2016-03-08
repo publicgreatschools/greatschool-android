@@ -22,4 +22,10 @@
     <string name="article_desc">Are our screen-addicted kids frying their brains?</string>
     <string name="content_by">Content by: GreatKids</string>
     <string name="school_distance">%s Miles</string>
+    <string name="more">7 More Schools</string>
+    <string name="world_game">Feeling Word Game</string>
+    <string name="eye_video">Through a child’s eyes videos</string>
+    <string name="toolbox">Emotional Toolbox</string>
+    <string name="easy_learning">EASY LEARNING</string>
+    <string name="easy_learning_info">A tasty way to teach your little ones how to wait</string>
 </resources>

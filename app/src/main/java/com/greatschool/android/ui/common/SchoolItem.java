@@ -20,25 +20,29 @@ public class SchoolItem extends RelativeLayout {
     private RatingBar mRatingBar;
     private TextView mReviewCount;
 
-    public SchoolItem(Context context) {
-        this(context, null);
+    public SchoolItem(Context context, boolean isMoreItem) {
+        this(context, null, isMoreItem);
     }
 
-    public SchoolItem(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+    public SchoolItem(Context context, AttributeSet attrs, boolean isMoreItem) {
+        this(context, attrs, 0, isMoreItem);
     }
 
-    public SchoolItem(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SchoolItem(Context context, AttributeSet attrs, int defStyleAttr, boolean isMoreItem) {
         super(context, attrs, defStyleAttr);
 
-        View.inflate(context, R.layout.school_item, this);
+        if (isMoreItem) {
+            View.inflate(context, R.layout.more_school_item, this);
+        } else {
+            View.inflate(context, R.layout.school_item, this);
 
-        mSchoolName = (TextView) findViewById(R.id.school_name);
-        mSchoolInfo = (TextView) findViewById(R.id.school_info);
-        mSchoolDistance = (TextView) findViewById(R.id.school_distance);
-        mSchoolScore = (TextView) findViewById(R.id.school_score);
-        mRatingBar = (RatingBar) findViewById(R.id.school_rating);
-        mReviewCount = (TextView) findViewById(R.id.review_count);
+            mSchoolName = (TextView) findViewById(R.id.school_name);
+            mSchoolInfo = (TextView) findViewById(R.id.school_info);
+            mSchoolDistance = (TextView) findViewById(R.id.school_distance);
+            mSchoolScore = (TextView) findViewById(R.id.school_score);
+            mRatingBar = (RatingBar) findViewById(R.id.school_rating);
+            mReviewCount = (TextView) findViewById(R.id.review_count);
+        }
     }
 
     public void create(School school) {

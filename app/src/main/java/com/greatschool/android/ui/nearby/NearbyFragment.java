@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.greatschool.android.Application;
@@ -120,9 +121,11 @@ public class NearbyFragment extends TabbedFragment implements View.OnClickListen
         School[] schools = application.getSchools();
 
         for (School school : schools) {
-            SchoolItem schoolItem = new SchoolItem(getContext());
+            SchoolItem schoolItem = new SchoolItem(getContext(), false);
             schoolItem.create(school);
             mAssignedSchoolLayout.addView(schoolItem);
         }
+
+        mAssignedSchoolLayout.addView(new SchoolItem(getContext(), true));
     }
 }

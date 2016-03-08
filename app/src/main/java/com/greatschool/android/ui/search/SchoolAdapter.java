@@ -23,7 +23,7 @@ public class SchoolAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        SchoolItem schoolItem = new SchoolItem(mContext);
+        SchoolItem schoolItem = new SchoolItem(mContext, false);
 
         return new DistanceItem(schoolItem);
     }

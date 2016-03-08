@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:font="http://schemas.android.com/apk/res-auto"
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
@@ -7,8 +8,8 @@
               android:orientation="vertical">
 
     <RelativeLayout
-        android:layout_width="80dp"
-        android:layout_height="80dp">
+        android:layout_width="56dp"
+        android:layout_height="56dp">
 
         <ImageView
             android:id="@+id/icon"
@@ -16,27 +17,30 @@
             android:layout_height="wrap_content"
             tools:src="@mipmap/assigned_school_icon"/>
 
-        <TextView
+        <com.greatschool.android.ui.common.font.TypefacedTextView
             android:id="@+id/count"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:layout_alignParentRight="true"
             android:background="@drawable/school_classify_item_count"
             android:gravity="center"
             android:textColor="#6DFFEC"
-            android:layout_marginRight="6dp"
+            android:textSize="10sp"
+            font:typeface="proxima_nova_semibold"
             tools:text="2"/>
 
     </RelativeLayout>
 
 
-    <TextView
+    <com.greatschool.android.ui.common.font.TypefacedTextView
         android:id="@+id/info"
-        android:layout_width="120dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:textColor="@android:color/white"
+        android:textSize="10sp"
+        font:typeface="proxima_nova_bold"
         tools:text="@string/assigned_schools"/>
 
 </LinearLayout>
