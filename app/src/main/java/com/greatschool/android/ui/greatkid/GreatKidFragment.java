@@ -28,6 +28,16 @@ public class GreatKidFragment extends TabbedFragment {
         return R.drawable.greatkid_icon_selector;
     }
 
+    @Override
+    public void registerListenersAndReload() {
+
+    }
+
+    @Override
+    public void unregisterListenersAndDestroyLoaders() {
+
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

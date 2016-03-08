@@ -12,7 +12,7 @@ public class School {
     private String mInfo;
 
     @SerializedName("distance")
-    private String mDistance;
+    private float mDistance;
 
     @SerializedName("score")
     private int mScore;
@@ -28,7 +28,7 @@ public class School {
         return mInfo;
     }
 
-    public String getDistance() {
+    public float getDistance() {
         return mDistance;
     }
 
@@ -52,7 +52,7 @@ public class School {
 
         private final String mName;
         private final String mInfo;
-        private String mDistance;
+        private float mDistance;
         private int mScore;
         private int mReview;
 
@@ -61,7 +61,7 @@ public class School {
             mInfo = info;
         }
 
-        public Builder withDistance(String distance) {
+        public Builder withDistance(float distance) {
             mDistance = distance;
             return this;
         }

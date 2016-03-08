@@ -19,17 +19,22 @@ public class SearchAdapter extends FragmentPagerAdapter {
     private final FragmentActivity mActivity;
 
     public SearchAdapter(FragmentActivity activity) {
-        this(activity, ImmutableList.<TabbedFragment>builder()
-                .add(new DistanceFragment())
-                .add(new AZFragment())
-                .add(new RatingFragment())
-                .build());
-    }
-
-    private SearchAdapter(FragmentActivity activity, List<TabbedFragment> fragments) {
         super(activity.getSupportFragmentManager());
+        SearchListFragment distanceFragment = new SearchListFragment();
+        distanceFragment.setSearchSortType(SearchSortType.DISTANCE);
+
+        SearchListFragment azFragment = new SearchListFragment();
+        azFragment.setSearchSortType(SearchSortType.AZ);
+
+        SearchListFragment ratingFragment = new SearchListFragment();
+        ratingFragment.setSearchSortType(SearchSortType.RATING);
+
+        mFragments = ImmutableList.<TabbedFragment>builder()
+                .add(distanceFragment)
+                .add(azFragment)
+                .add(ratingFragment)
+                .build();
         mActivity = activity;
-        mFragments = fragments;
     }
 
     @Override
@@ -47,13 +52,13 @@ public class SearchAdapter extends FragmentPagerAdapter {
         final int titleResId;
 
         switch (position) {
-            case DistanceFragment.INDEX:
+            case SearchListFragment.DISTANCE_INDEX:
                 titleResId = getDistanceFragment().getTitleResId();
                 break;
-            case AZFragment.INDEX:
+            case SearchListFragment.AZ_INDEX:
                 titleResId = getAZFragment().getTitleResId();
                 break;
-            case RatingFragment.INDEX:
+            case SearchListFragment.RATING_INDEX:
                 titleResId = getRatingFragment().getTitleResId();
                 break;
 
@@ -65,16 +70,16 @@ public class SearchAdapter extends FragmentPagerAdapter {
         return mActivity.getString(titleResId);
     }
 
-    public DistanceFragment getDistanceFragment() {
-        return (DistanceFragment) getItem(DistanceFragment.INDEX);
+    public SearchListFragment getDistanceFragment() {
+        return (SearchListFragment) getItem(SearchListFragment.DISTANCE_INDEX);
     }
 
-    public AZFragment getAZFragment() {
-        return (AZFragment) getItem(AZFragment.INDEX);
+    public SearchListFragment getAZFragment() {
+        return (SearchListFragment) getItem(SearchListFragment.AZ_INDEX);
     }
 
-    public RatingFragment getRatingFragment() {
-        return (RatingFragment) getItem(RatingFragment.INDEX);
+    public SearchListFragment getRatingFragment() {
+        return (SearchListFragment) getItem(SearchListFragment.RATING_INDEX);
     }
 
     public View getTabView(int position) {

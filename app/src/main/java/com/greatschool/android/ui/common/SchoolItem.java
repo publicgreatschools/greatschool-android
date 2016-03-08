@@ -44,7 +44,8 @@ public class SchoolItem extends RelativeLayout {
     public void create(School school) {
         mSchoolName.setText(school.getName());
         mSchoolInfo.setText(school.getInfo());
-        mSchoolDistance.setText(school.getDistance());
+
+        mSchoolDistance.setText(getResources().getString(R.string.school_distance, school.getDistance()));
 
         mSchoolScore.setText(String.valueOf(school.getScore()));
         mReviewCount.setText(getResources().getString(R.string.reviews, school.getReview()));

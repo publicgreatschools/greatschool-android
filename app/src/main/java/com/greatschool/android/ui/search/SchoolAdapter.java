@@ -8,12 +8,14 @@ import android.view.ViewGroup;
 import com.greatschool.android.model.School;
 import com.greatschool.android.ui.common.SchoolItem;
 
+import java.util.List;
+
 public class SchoolAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private final School[] mSchools;
+    private final List<School> mSchools;
     private final Context mContext;
 
-    public SchoolAdapter(School[] schools, Context context) {
+    public SchoolAdapter(List<School> schools, Context context) {
         mSchools = schools;
         mContext = context;
     }
@@ -28,7 +30,7 @@ public class SchoolAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        School school = mSchools[position];
+        School school = mSchools.get(position);
 
         SchoolItem schoolItem = (SchoolItem) holder.itemView;
         schoolItem.create(school);
@@ -36,7 +38,7 @@ public class SchoolAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     @Override
     public int getItemCount() {
-        return mSchools.length;
+        return mSchools.size();
     }
 
     static class DistanceItem extends RecyclerView.ViewHolder {

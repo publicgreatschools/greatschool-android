@@ -40,6 +40,16 @@ public class SearchFragment extends TabbedFragment implements TabLayout.OnTabSel
         return R.drawable.search_icon_selector;
     }
 
+    @Override
+    public void registerListenersAndReload() {
+
+    }
+
+    @Override
+    public void unregisterListenersAndDestroyLoaders() {
+
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -67,7 +77,7 @@ public class SearchFragment extends TabbedFragment implements TabLayout.OnTabSel
         mLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DistanceFragment distanceFragment = mSearchAdapter.getDistanceFragment();
+                SearchListFragment distanceFragment = mSearchAdapter.getDistanceFragment();
 
                 if (mShownListView) {
                     mLocation.setImageResource(R.mipmap.school_view);
@@ -88,9 +98,9 @@ public class SearchFragment extends TabbedFragment implements TabLayout.OnTabSel
         mTabLayout = (TabLayout) view.findViewById(R.id.search_tab);
         mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-        DistanceFragment distanceFragment = mSearchAdapter.getDistanceFragment();
-        AZFragment azFragment = mSearchAdapter.getAZFragment();
-        RatingFragment ratingFragment = mSearchAdapter.getRatingFragment();
+        SearchListFragment distanceFragment = mSearchAdapter.getDistanceFragment();
+        SearchListFragment azFragment = mSearchAdapter.getAZFragment();
+        SearchListFragment ratingFragment = mSearchAdapter.getRatingFragment();
 
         TabLayout.Tab distanceTab = createTabForFragment(distanceFragment);
         TabLayout.Tab azTab = createTabForFragment(azFragment);

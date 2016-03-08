@@ -39,6 +39,16 @@ public class NearbyFragment extends TabbedFragment implements View.OnClickListen
         return R.drawable.nearby_icon_selector;
     }
 
+    @Override
+    public void registerListenersAndReload() {
+
+    }
+
+    @Override
+    public void unregisterListenersAndDestroyLoaders() {
+
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

@@ -28,6 +28,16 @@ public class MySchoolFragment extends TabbedFragment {
         return R.drawable.myschool_icon_selector;
     }
 
+    @Override
+    public void registerListenersAndReload() {
+
+    }
+
+    @Override
+    public void unregisterListenersAndDestroyLoaders() {
+
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
