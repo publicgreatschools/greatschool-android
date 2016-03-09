@@ -9,6 +9,8 @@ import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -100,12 +102,56 @@ public class NearbyFragment extends TabbedFragment implements View.OnClickListen
 
     private void showHomeStart() {
         mHomeStart.setVisibility(View.VISIBLE);
-        mHomeFullScreen.setVisibility(View.GONE);
+
+        Animation toCurrent = AnimationUtils.loadAnimation(getContext(), R.anim.slide_left_to_current);
+        mHomeStart.startAnimation(toCurrent);
+
+        Animation toRight = AnimationUtils.loadAnimation(getContext(), R.anim.slide_current_to_right);
+        toRight.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                mHomeFullScreen.setVisibility(View.GONE);
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        mHomeFullScreen.startAnimation(toRight);
     }
 
     private void showHomeFullScreen() {
-        mHomeStart.setVisibility(View.GONE);
         mHomeFullScreen.setVisibility(View.VISIBLE);
+
+        Animation toLeft = AnimationUtils.loadAnimation(getContext(), R.anim.slide_current_to_left);
+        mHomeStart.startAnimation(toLeft);
+        toLeft.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                mHomeStart.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        Animation toCurrent = AnimationUtils.loadAnimation(getContext(), R.anim.slide_right_to_current);
+        mHomeFullScreen.startAnimation(toCurrent);
     }
 
     public void verifyShowHomeStart() {

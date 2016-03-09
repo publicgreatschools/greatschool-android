@@ -134,7 +134,7 @@ public class SearchListFragment extends TabbedFragment {
                     case AZ:
                         return lhs.getName().compareTo(rhs.getName());
                     case RATING:
-                        return rhs.getReview() - lhs.getReview();
+                        return rhs.getScore() - lhs.getScore();
                     default:
                         break;
                 }
