@@ -1,5 +1,6 @@
 package com.greatschool.android.ui.detail;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,6 +31,7 @@ public class DetailActivity extends BaseActivity implements TabLayout.OnTabSelec
         Intent intent = new Intent(context, DetailActivity.class);
         intent.putExtra(SCHOOL, school);
         context.startActivity(intent);
+        startActivityAnimation((Activity) context);
     }
 
     @Override
@@ -43,10 +45,11 @@ public class DetailActivity extends BaseActivity implements TabLayout.OnTabSelec
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.overview_lowercase);
 
+
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                setBackPressed();
             }
         });
 

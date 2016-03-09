@@ -82,8 +82,8 @@ public class NearbyFragment extends TabbedFragment implements View.OnClickListen
                 new float[]{0, 1}, Shader.TileMode.CLAMP);
         mSchoolSizeView.getPaint().setShader(textShader);
 
-        showHomeStart();
-
+        mHomeStart.setVisibility(View.VISIBLE);
+        mHomeFullScreen.setVisibility(View.GONE);
         showSchools();
     }
 
@@ -103,10 +103,10 @@ public class NearbyFragment extends TabbedFragment implements View.OnClickListen
     private void showHomeStart() {
         mHomeStart.setVisibility(View.VISIBLE);
 
-        Animation toCurrent = AnimationUtils.loadAnimation(getContext(), R.anim.slide_left_to_current);
+        Animation toCurrent = AnimationUtils.loadAnimation(getContext(), R.anim.enter_back);
         mHomeStart.startAnimation(toCurrent);
 
-        Animation toRight = AnimationUtils.loadAnimation(getContext(), R.anim.slide_current_to_right);
+        Animation toRight = AnimationUtils.loadAnimation(getContext(), R.anim.exit_back);
         toRight.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
@@ -131,7 +131,7 @@ public class NearbyFragment extends TabbedFragment implements View.OnClickListen
     private void showHomeFullScreen() {
         mHomeFullScreen.setVisibility(View.VISIBLE);
 
-        Animation toLeft = AnimationUtils.loadAnimation(getContext(), R.anim.slide_current_to_left);
+        Animation toLeft = AnimationUtils.loadAnimation(getContext(), R.anim.exit);
         mHomeStart.startAnimation(toLeft);
         toLeft.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -150,7 +150,7 @@ public class NearbyFragment extends TabbedFragment implements View.OnClickListen
             }
         });
 
-        Animation toCurrent = AnimationUtils.loadAnimation(getContext(), R.anim.slide_right_to_current);
+        Animation toCurrent = AnimationUtils.loadAnimation(getContext(), R.anim.enter);
         mHomeFullScreen.startAnimation(toCurrent);
     }
 

@@ -1,10 +1,13 @@
 package com.greatschool.android.ui.common;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
+
+import com.greatschool.android.R;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -23,5 +26,24 @@ public class BaseActivity extends AppCompatActivity {
 
     public void addTabForFragment(TabLayout.Tab tabToAdd, TabbedFragment tabbedFragmentToAdd, TabLayout tabLayout) {
         tabLayout.addTab(tabToAdd, tabbedFragmentToAdd.getIndex());
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finishActivityAnimation(this);
+    }
+
+    public void setBackPressed() {
+        super.onBackPressed();
+        finishActivityAnimation(this);
+    }
+
+    public static void startActivityAnimation(Activity activity) {
+        activity.overridePendingTransition(R.anim.enter, R.anim.exit);
+    }
+
+    public static void finishActivityAnimation(Activity activity) {
+        activity.overridePendingTransition(R.anim.enter_back, R.anim.exit_back);
     }
 }
