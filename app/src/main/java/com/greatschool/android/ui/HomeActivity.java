@@ -1,14 +1,13 @@
 package com.greatschool.android.ui;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.Toast;
 
 import com.greatschool.android.R;
 import com.greatschool.android.ui.common.BaseActivity;
-import com.greatschool.android.ui.common.TabbedFragment;
 import com.greatschool.android.ui.greatkid.GreatKidFragment;
 import com.greatschool.android.ui.nearby.NearbyFragment;
 import com.greatschool.android.ui.school.MySchoolFragment;
@@ -83,6 +82,12 @@ public class HomeActivity extends BaseActivity implements TabLayout.OnTabSelecte
         Object tag = tab.getTag();
 
         mCurrentPage = mHomePagerAdapter.getPageIndexForTag(tag);
+
+        if (mCurrentPage == MySchoolFragment.INDEX || mCurrentPage == GreatKidFragment.INDEX) {
+            Toast.makeText(this, R.string.coming_soon, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         mViewPager.setCurrentItem(mCurrentPage);
     }
 
