@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:font="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginBottom="5dp"
+              android:layout_marginTop="5dp"
+              android:background="@drawable/school_item"
+              android:orientation="vertical"
+              android:padding="12dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RatingBar
+            android:id="@+id/review_rating"
+            style="@style/CustomRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:isIndicator="true"
+            android:numStars="5"/>
+
+        <com.greatschool.android.ui.common.font.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="August 24, 2015"
+            android:textColor="#8593A2"
+            android:textSize="14sp"
+            font:typeface="proxima_nova_regular"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#D1DFE5"></View>
+
+    <com.greatschool.android.ui.common.font.TypefacedTextView
+        android:id="@+id/review_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#1C252E"
+        android:textSize="14sp"
+        font:typeface="proxima_nova_regular"/>
+
+    <ImageView
+        android:id="@+id/review_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"/>
+
+    <com.greatschool.android.ui.common.font.TypefacedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submitted by a parent"
+        android:textColor="#8593A2"
+        android:textSize="12sp"
+        android:layout_marginBottom="10dp"
+        font:typeface="proxima_nova_regular"/>
+
+</LinearLayout>

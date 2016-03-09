@@ -68,6 +68,7 @@ public class DetailActivity extends BaseActivity implements TabLayout.OnTabSelec
         overviewFragment.setSchool(mSchool);
         StatsFragment statsFragment = mDetailAdapter.getStatsFragment();
         ReviewFragment reviewFragment = mDetailAdapter.getReviewFragment();
+        reviewFragment.setSchool(mSchool);
 
         TabLayout.Tab overviewTab = createTabForFragment(overviewFragment, mTabLayout);
         TabLayout.Tab statsTab = createTabForFragment(statsFragment, mTabLayout);

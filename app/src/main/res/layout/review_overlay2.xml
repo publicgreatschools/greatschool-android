@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="6dp"
+        android:background="@mipmap/overlay3"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="18dp"
+        android:background="@mipmap/overlay2"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="25dp"
+        android:background="@mipmap/overlay_blank1"
+        android:orientation="vertical"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="English Language Arts"
+                android:textColor="#1C252E"
+                android:textSize="12sp"
+                font:typeface="proxima_nova_regular"/>
+
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Grade 9"
+                android:textColor="#888889"
+                android:textSize="12sp"
+                font:typeface="proxima_nova_regular"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:id="@+id/review_date1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="2014"
+                android:textColor="#1C252E"
+                android:textSize="12sp"
+                font:typeface="proxima_nova_regular"/>
+
+
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:id="@+id/review_progress1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="80%"
+                android:textColor="#101112"
+                android:textSize="14sp"
+                font:typeface="proxima_nova_semibold"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/review_progress1"
+                android:layout_toRightOf="@id/review_date1"
+                android:src="@mipmap/progress1"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:id="@+id/review_date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="2013"
+                android:textColor="#1C252E"
+                android:textSize="12sp"
+                font:typeface="proxima_nova_regular"/>
+
+
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:id="@+id/review_progress2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="76%"
+                android:textColor="#101112"
+                android:textSize="14sp"
+                font:typeface="proxima_nova_semibold"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/review_progress2"
+                android:layout_toRightOf="@id/review_date2"
+                android:src="@mipmap/progress2"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:id="@+id/review_date3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="2012"
+                android:textColor="#1C252E"
+                android:textSize="12sp"
+                font:typeface="proxima_nova_regular"/>
+
+
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:id="@+id/review_progress3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="58%"
+                android:textColor="#101112"
+                android:textSize="14sp"
+                font:typeface="proxima_nova_semibold"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/review_progress3"
+                android:layout_toRightOf="@id/review_date3"
+                android:src="@mipmap/progress3"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

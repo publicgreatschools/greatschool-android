@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:font="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/school_item"
+              android:orientation="horizontal"
+              android:padding="20dp">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/review_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#1C252E"
+            android:textSize="40sp"
+            tools:text="4.3"/>
+
+        <RatingBar
+            android:id="@+id/review_rating"
+            style="@style/CustomRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:numStars="5"/>
+
+        <com.greatschool.android.ui.common.font.TypefacedTextView
+            android:id="@+id/review_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            font:typeface="proxima_nova_regular"
+            tools:text="@string/reviews"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="25dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/review_image1"
+                android:layout_width="160dp"
+                android:layout_height="10dp"
+                android:src="@drawable/review_line1"/>
+
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:id="@+id/review_count1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="38"
+                android:textColor="#1C252E"
+                android:textSize="16sp"
+                font:typeface="proxima_nova_regular"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/review_image2"
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:src="@drawable/review_line2"/>
+
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:id="@+id/review_count2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="10"
+                android:textColor="#1C252E"
+                android:textSize="16sp"
+                font:typeface="proxima_nova_regular"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/review_image3"
+                android:layout_width="60dp"
+                android:layout_height="10dp"
+                android:src="@drawable/review_line3"/>
+
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:id="@+id/review_count3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="6"
+                android:textColor="#1C252E"
+                android:textSize="16sp"
+                font:typeface="proxima_nova_regular"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/review_image4"
+                android:layout_width="40dp"
+                android:layout_height="10dp"
+                android:src="@drawable/review_line4"/>
+
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:id="@+id/review_count4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="4"
+                android:textColor="#1C252E"
+                android:textSize="16sp"
+                font:typeface="proxima_nova_regular"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/review_image5"
+                android:layout_width="20dp"
+                android:layout_height="10dp"
+                android:src="@drawable/review_line5"/>
+
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:id="@+id/review_count5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="2"
+                android:textColor="#1C252E"
+                android:textSize="16sp"
+                font:typeface="proxima_nova_regular"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
