@@ -46,15 +46,15 @@ public class HomeActivity extends BaseActivity implements TabLayout.OnTabSelecte
         MySchoolFragment mySchoolFragment = mHomePagerAdapter.getMySchoolFragment();
         GreatKidFragment greatKidFragment = mHomePagerAdapter.getGreatKidFragment();
 
-        TabLayout.Tab nearbyTab = createTabForFragment(nearbyFragment);
-        TabLayout.Tab searchTab = createTabForFragment(searchFragment);
-        TabLayout.Tab mySchoolTab = createTabForFragment(mySchoolFragment);
-        TabLayout.Tab greatKidTab = createTabForFragment(greatKidFragment);
+        TabLayout.Tab nearbyTab = createTabForFragment(nearbyFragment, mTabLayout);
+        TabLayout.Tab searchTab = createTabForFragment(searchFragment, mTabLayout);
+        TabLayout.Tab mySchoolTab = createTabForFragment(mySchoolFragment, mTabLayout);
+        TabLayout.Tab greatKidTab = createTabForFragment(greatKidFragment, mTabLayout);
 
-        addTabForFragment(nearbyTab, nearbyFragment);
-        addTabForFragment(searchTab, searchFragment);
-        addTabForFragment(mySchoolTab, mySchoolFragment);
-        addTabForFragment(greatKidTab, greatKidFragment);
+        addTabForFragment(nearbyTab, nearbyFragment, mTabLayout);
+        addTabForFragment(searchTab, searchFragment, mTabLayout);
+        addTabForFragment(mySchoolTab, mySchoolFragment, mTabLayout);
+        addTabForFragment(greatKidTab, greatKidFragment, mTabLayout);
 
         for (int i = 0; i < mTabLayout.getTabCount(); i++) {
             TabLayout.Tab tab = mTabLayout.getTabAt(i);
@@ -76,18 +76,6 @@ public class HomeActivity extends BaseActivity implements TabLayout.OnTabSelecte
 
     private void findViews() {
         mViewPager = (ViewPager) findViewById(R.id.home_activity_customviewpager);
-    }
-
-    @NonNull
-    private TabLayout.Tab createTabForFragment(TabbedFragment tabbedFragment) {
-        Object tag = tabbedFragment.getTitleResId();
-        TabLayout.Tab tab = mTabLayout.newTab();
-        tab.setTag(tag);
-        return tab;
-    }
-
-    private void addTabForFragment(TabLayout.Tab tabToAdd, TabbedFragment tabbedFragmentToAdd) {
-        mTabLayout.addTab(tabToAdd, tabbedFragmentToAdd.getIndex());
     }
 
     @Override

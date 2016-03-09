@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.greatschool.android.R;
 import com.greatschool.android.model.School;
+import com.greatschool.android.ui.detail.DetailActivity;
 
 public class SchoolItem extends RelativeLayout {
 
@@ -22,6 +23,8 @@ public class SchoolItem extends RelativeLayout {
     private RatingBar mRatingBar;
     private TextView mReviewCount;
 
+    private School mSchool;
+
     public SchoolItem(Context context, boolean isMoreItem) {
         this(context, null, isMoreItem);
     }
@@ -30,7 +33,7 @@ public class SchoolItem extends RelativeLayout {
         this(context, attrs, 0, isMoreItem);
     }
 
-    public SchoolItem(Context context, AttributeSet attrs, int defStyleAttr, boolean isMoreItem) {
+    public SchoolItem(final Context context, AttributeSet attrs, int defStyleAttr, boolean isMoreItem) {
         super(context, attrs, defStyleAttr);
 
         if (isMoreItem) {
@@ -45,9 +48,21 @@ public class SchoolItem extends RelativeLayout {
             mRatingBar = (RatingBar) findViewById(R.id.school_rating);
             mReviewCount = (TextView) findViewById(R.id.review_count);
         }
+
+        setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (mSchool != null) {
+                    DetailActivity.startDetailActivity(context, mSchool);
+                }
+            }
+        });
     }
 
     public SchoolItem create(School school) {
+        mSchool = school;
+
         mSchoolName.setText(school.getName());
         mSchoolInfo.setText(school.getInfo());
 

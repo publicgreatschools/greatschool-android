@@ -28,4 +28,23 @@
     <string name="toolbox">Emotional Toolbox</string>
     <string name="easy_learning">EASY LEARNING</string>
     <string name="easy_learning_info">A tasty way to teach your little ones how to wait</string>
+    <string name="overview">OVERVIEW</string>
+    <string name="review">REVIEW</string>
+    <string name="stats">STATS</string>
+    <string name="school_rating">GreatSchools Rating</string>
+    <string name="out_of_count">Out of 10</string>
+    <string name="user_review">User Review</string>
+    <string name="user_review_count">%d Reviews</string>
+    <string name="student_enrolled">Student Enrolled</string>
+    <string name="school_location">Location</string>
+    <string name="before_care">Before Care</string>
+    <string name="no">NO</string>
+    <string name="yes">YES</string>
+    <string name="after_care">After Care</string>
+    <string name="overview_lowercase">Overview</string>
+    <string name="setting">Setting</string>
+    <string name="call">Call</string>
+    <string name="favorite">Favorite</string>
+    <string name="detail_header_title">College Park High School</string>
+    <string name="detail_overview">DETAILS OVERVIEW</string>
 </resources>

@@ -3,7 +3,9 @@ package com.greatschool.android.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class School {
+import java.io.Serializable;
+
+public class School implements Serializable {
 
     @SerializedName("name")
     private String mName;
@@ -19,6 +21,12 @@ public class School {
 
     @SerializedName("review")
     private int mReview;
+
+    @SerializedName("location")
+    private String mLocation;
+
+    @SerializedName("reviewScore")
+    private float mReviewScore;
 
     public String getName() {
         return mName;
@@ -40,44 +48,21 @@ public class School {
         return mReview;
     }
 
-    private School(Builder builder) {
-        this.mName = builder.mName;
-        this.mInfo = builder.mInfo;
-        this.mDistance = builder.mDistance;
-        this.mScore = builder.mScore;
-        this.mReview = builder.mReview;
+    public String getLocation() {
+        return mLocation;
     }
 
-    public static class Builder {
+    public float getReviewScore() {
+        return mReviewScore;
+    }
 
-        private final String mName;
-        private final String mInfo;
-        private float mDistance;
-        private int mScore;
-        private int mReview;
-
-        public Builder(String name, String info) {
-            mName = name;
-            mInfo = info;
-        }
-
-        public Builder withDistance(float distance) {
-            mDistance = distance;
-            return this;
-        }
-
-        public Builder withScore(int score) {
-            mScore = score;
-            return this;
-        }
-
-        public Builder withReview(int review) {
-            mReview = review;
-            return this;
-        }
-
-        public School build() {
-            return new School(this);
-        }
+    public School(String name, String info, float distance, int score, int review, String location, float reviewScore) {
+        mName = name;
+        mInfo = info;
+        mDistance = distance;
+        mScore = score;
+        mReview = review;
+        mLocation = location;
+        mReviewScore = reviewScore;
     }
 }

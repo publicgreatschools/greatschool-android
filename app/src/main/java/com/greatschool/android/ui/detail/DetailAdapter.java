@@ -1,4 +1,4 @@
-package com.greatschool.android.ui.search;
+package com.greatschool.android.ui.detail;
 
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -12,29 +12,24 @@ import com.greatschool.android.ui.common.TabbedFragment;
 
 import java.util.List;
 
-public class SearchAdapter extends FragmentPagerAdapter {
+public class DetailAdapter extends FragmentPagerAdapter {
 
     private static final String TAG = "SearchAdapter";
     private final List<TabbedFragment> mFragments;
     private final FragmentActivity mActivity;
 
-    public SearchAdapter(FragmentActivity activity) {
+    public DetailAdapter(FragmentActivity activity) {
+        this(activity, ImmutableList.<TabbedFragment>builder()
+                .add(new OverviewFragment())
+                .add(new StatsFragment())
+                .add(new ReviewFragment())
+                .build());
+    }
+
+    private DetailAdapter(FragmentActivity activity, List<TabbedFragment> fragments) {
         super(activity.getSupportFragmentManager());
-        SearchListFragment distanceFragment = new SearchListFragment();
-        distanceFragment.setSearchSortType(SearchSortType.DISTANCE);
-
-        SearchListFragment azFragment = new SearchListFragment();
-        azFragment.setSearchSortType(SearchSortType.AZ);
-
-        SearchListFragment ratingFragment = new SearchListFragment();
-        ratingFragment.setSearchSortType(SearchSortType.RATING);
-
-        mFragments = ImmutableList.<TabbedFragment>builder()
-                .add(distanceFragment)
-                .add(azFragment)
-                .add(ratingFragment)
-                .build();
         mActivity = activity;
+        mFragments = fragments;
     }
 
     @Override
@@ -52,14 +47,14 @@ public class SearchAdapter extends FragmentPagerAdapter {
         final int titleResId;
 
         switch (position) {
-            case SearchListFragment.DISTANCE_INDEX:
-                titleResId = getDistanceFragment().getTitleResId();
+            case OverviewFragment.INDEX:
+                titleResId = getOverviewFragment().getTitleResId();
                 break;
-            case SearchListFragment.AZ_INDEX:
-                titleResId = getAZFragment().getTitleResId();
+            case StatsFragment.INDEX:
+                titleResId = getStatsFragment().getTitleResId();
                 break;
-            case SearchListFragment.RATING_INDEX:
-                titleResId = getRatingFragment().getTitleResId();
+            case ReviewFragment.INDEX:
+                titleResId = getReviewFragment().getTitleResId();
                 break;
 
             default:
@@ -70,16 +65,16 @@ public class SearchAdapter extends FragmentPagerAdapter {
         return mActivity.getString(titleResId);
     }
 
-    public SearchListFragment getDistanceFragment() {
-        return (SearchListFragment) getItem(SearchListFragment.DISTANCE_INDEX);
+    public OverviewFragment getOverviewFragment() {
+        return (OverviewFragment) getItem(OverviewFragment.INDEX);
     }
 
-    public SearchListFragment getAZFragment() {
-        return (SearchListFragment) getItem(SearchListFragment.AZ_INDEX);
+    public StatsFragment getStatsFragment() {
+        return (StatsFragment) getItem(StatsFragment.INDEX);
     }
 
-    public SearchListFragment getRatingFragment() {
-        return (SearchListFragment) getItem(SearchListFragment.RATING_INDEX);
+    public ReviewFragment getReviewFragment() {
+        return (ReviewFragment) getItem(ReviewFragment.INDEX);
     }
 
     public View getTabView(int position) {
@@ -90,19 +85,19 @@ public class SearchAdapter extends FragmentPagerAdapter {
     }
 
     public int getPageIndexForTag(Object tag) {
-        TabbedFragment tabbedFragment = getDistanceFragment();
+        TabbedFragment tabbedFragment = getOverviewFragment();
 
         if (tagMatches(tag, tabbedFragment)) {
             return tabbedFragment.getIndex();
         }
 
-        tabbedFragment = getAZFragment();
+        tabbedFragment = getStatsFragment();
 
         if (tagMatches(tag, tabbedFragment)) {
             return tabbedFragment.getIndex();
         }
 
-        tabbedFragment = getRatingFragment();
+        tabbedFragment = getReviewFragment();
 
         if (tagMatches(tag, tabbedFragment)) {
             return tabbedFragment.getIndex();
@@ -116,4 +111,5 @@ public class SearchAdapter extends FragmentPagerAdapter {
         return otherTag.equals(tag);
     }
 }
+
 

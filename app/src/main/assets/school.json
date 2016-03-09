@@ -2,36 +2,46 @@
   {
     "name": "School Name A",
     "info": "Public | 9 - 12 | Pleasant Hill, CA",
+    "location" : "Pleasant Hill, CA",
     "distance": 3.25,
     "score": 9,
-    "review": 314
+    "review": 314,
+    "reviewScore": 4.3
   },
   {
     "name": "School Name B",
     "info": "Public | 9 - 12 | Pleasant Hill, CA",
+    "location" : "Pleasant Hill, CA",
     "distance": 3.15,
     "score": 9,
-    "review": 211
+    "review": 211,
+    "reviewScore": 4.3
   },
   {
     "name": "School Name C",
     "info": "Public | 9 - 12 | Pleasant Hill, CA",
+    "location" : "Pleasant Hill, CA",
     "distance": 3.45,
     "score": 5,
-    "review": 242
+    "review": 242,
+    "reviewScore": 4.3
   },
   {
     "name": "School Name D",
     "info": "Public | 9 - 12 | Pleasant Hill, CA",
+    "location" : "Pleasant Hill, CA",
     "distance": 1.45,
     "score": 2,
-    "review": 142
+    "review": 142,
+    "reviewScore": 4.3
   },
   {
     "name": "School Name E",
     "info": "Public | 9 - 12 | Pleasant Hill, CA",
+    "location" : "Pleasant Hill, CA",
     "distance": 4.45,
     "score": 7,
-    "review": 222
+    "review": 222,
+    "reviewScore": 4.3
   }
 ]
