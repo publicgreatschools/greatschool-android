@@ -47,7 +47,13 @@ public class SchoolClassifyItem extends RelativeLayout {
             }
 
             int count = a.getInteger(R.styleable.SchoolClassifyItem_classify_count, 0);
-            mCount.setText(String.valueOf(count));
+
+            if (count == 0) {
+                mCount.setVisibility(GONE);
+            } else {
+                mCount.setVisibility(VISIBLE);
+                mCount.setText(String.valueOf(count));
+            }
 
             String info = a.getString(R.styleable.SchoolClassifyItem_classify_info);
             mInfo.setText(info);

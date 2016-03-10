@@ -1,141 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:classify="http://schemas.android.com/apk/res-auto"
     xmlns:font="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <com.greatschool.android.ui.common.font.TypefacedTextView
-        android:id="@+id/pick_school"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:text="@string/pick_school"
-        android:textColor="@android:color/white"
-        android:textSize="14sp"
-        font:typeface="proxima_nova_bold"/>
-
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="265dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="20dp"
-        android:background="@mipmap/divider"
-        android:orientation="vertical">
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:layout_below="@id/pick_school"
-            android:orientation="horizontal">
-
-            <com.greatschool.android.ui.nearby.SchoolClassifyItem
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                classify:classify_count="30"
-                classify:classify_icon="@mipmap/assigned_school_icon"
-                classify:classify_info="@string/assigned_schools"/>
-
-            <com.greatschool.android.ui.nearby.SchoolClassifyItem
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                classify:classify_count="5"
-                classify:classify_icon="@mipmap/elementary_school_icon"
-                classify:classify_info="@string/elementary_school"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:layout_below="@id/pick_school"
-            android:orientation="horizontal">
-
-            <com.greatschool.android.ui.nearby.SchoolClassifyItem
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                classify:classify_count="17"
-                classify:classify_icon="@mipmap/middle_school_icon"
-                classify:classify_info="@string/middle_school"/>
-
-            <com.greatschool.android.ui.nearby.SchoolClassifyItem
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                classify:classify_count="8"
-                classify:classify_icon="@mipmap/high_school_icon"
-                classify:classify_info="@string/high_school"/>
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F0F5F6"
-        android:orientation="vertical"
-        android:paddingBottom="20dp">
+        android:orientation="vertical">
 
         <com.greatschool.android.ui.common.font.TypefacedTextView
+            android:id="@+id/pick_school"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="15dp"
-            android:text="@string/assigned_schools"
-            android:textColor="#888889"
-            android:textSize="12sp"
-            font:typeface="proxima_nova_semibold"/>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="@string/pick_school"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            font:typeface="proxima_nova_bold"/>
+
 
         <LinearLayout
-            android:id="@+id/assigned_schools"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginTop="6dp"
-            android:orientation="vertical"/>
+            android:layout_height="265dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/divider"
+            android:orientation="vertical">
 
-        <com.greatschool.android.ui.common.font.TypefacedTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="15dp"
-            android:text="@string/recommended_content"
-            android:textColor="#888889"
-            android:textSize="12sp"
-            font:typeface="proxima_nova_semibold"/>
 
-        <include
-            layout="@layout/recommended_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"></include>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_below="@id/pick_school"
+                android:orientation="horizontal">
 
-        <include
-            layout="@layout/recommended_viewpager"
+                <com.greatschool.android.ui.nearby.SchoolClassifyItem
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    classify:classify_count="0"
+                    classify:classify_icon="@mipmap/assigned_school_icon"
+                    classify:classify_info="@string/assigned_schools"/>
+
+                <com.greatschool.android.ui.nearby.SchoolClassifyItem
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    classify:classify_count="0"
+                    classify:classify_icon="@mipmap/elementary_school_icon"
+                    classify:classify_info="@string/elementary_school"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_below="@id/pick_school"
+                android:orientation="horizontal">
+
+                <com.greatschool.android.ui.nearby.SchoolClassifyItem
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    classify:classify_count="17"
+                    classify:classify_icon="@mipmap/middle_school_icon"
+                    classify:classify_info="@string/middle_school"/>
+
+                <com.greatschool.android.ui.nearby.SchoolClassifyItem
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    classify:classify_count="99"
+                    classify:classify_icon="@mipmap/high_school_icon"
+                    classify:classify_info="@string/high_school"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"></include>
+            android:layout_height="match_parent"
+            android:background="#F0F5F6"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
 
-        <include
-            layout="@layout/recommended_list"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginTop="6dp"></include>
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/assigned_schools"
+                android:textColor="#888889"
+                android:textSize="12sp"
+                font:typeface="proxima_nova_semibold"/>
 
+            <LinearLayout
+                android:id="@+id/assigned_schools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical"/>
+
+            <com.greatschool.android.ui.common.font.TypefacedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/recommended_content"
+                android:textColor="#888889"
+                android:textSize="12sp"
+                font:typeface="proxima_nova_semibold"/>
+
+            <include
+                layout="@layout/recommended_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"></include>
+
+            <include
+                layout="@layout/recommended_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"></include>
+
+            <include
+                layout="@layout/recommended_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="6dp"></include>
+
+        </LinearLayout>
     </LinearLayout>
 
-
-</LinearLayout>
+</ScrollView>
 

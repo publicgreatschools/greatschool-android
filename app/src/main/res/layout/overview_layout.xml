@@ -8,6 +8,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:background="@drawable/school_item"
@@ -15,7 +20,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             android:padding="12dp">
 
             <com.greatschool.android.ui.common.font.TypefacedTextView
@@ -33,7 +38,7 @@
                 android:layout_below="@id/school_rating_title"
                 android:layout_marginTop="10dp"
                 android:text="@string/out_of_count"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 font:typeface="proxima_nova_regular"/>
 
 
@@ -68,7 +73,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             android:padding="12dp">
 
             <com.greatschool.android.ui.common.font.TypefacedTextView
@@ -87,7 +92,7 @@
                 android:layout_below="@id/user_review"
                 android:layout_marginTop="10dp"
                 android:text="@string/user_review_count"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 font:typeface="proxima_nova_regular"/>
 
 
@@ -133,7 +138,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="42dp"
             android:padding="12dp">
 
             <com.greatschool.android.ui.common.font.TypefacedTextView
@@ -165,7 +170,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="42dp"
             android:padding="12dp">
 
             <com.greatschool.android.ui.common.font.TypefacedTextView
@@ -209,7 +214,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="42dp"
             android:padding="12dp">
 
             <com.greatschool.android.ui.common.font.TypefacedTextView
@@ -241,7 +246,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="42dp"
             android:padding="12dp">
 
             <com.greatschool.android.ui.common.font.TypefacedTextView
@@ -265,5 +270,6 @@
                 font:typeface="proxima_nova_semibold"/>
 
         </RelativeLayout>
+    </LinearLayout>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

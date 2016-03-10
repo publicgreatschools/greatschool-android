@@ -10,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Toast;
 
 import com.greatschool.android.R;
 import com.greatschool.android.model.School;
@@ -98,7 +99,7 @@ public class DetailActivity extends BaseActivity implements TabLayout.OnTabSelec
 
         mTabLayout.setOnTabSelectedListener(this);
 
-        mTabLayout.setupWithViewPager(mViewPager);
+//        mTabLayout.setupWithViewPager(mViewPager);
 
         mTabLayout.setTabTextColors(getResources().getColor(R.color.search_tab_text_color),
                 getResources().getColor(R.color.search_tab_selected_text_color));
@@ -106,7 +107,7 @@ public class DetailActivity extends BaseActivity implements TabLayout.OnTabSelec
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.detail_menu, menu);
+//        getMenuInflater().inflate(R.menu.detail_menu, menu);
         return true;
     }
 
@@ -115,7 +116,12 @@ public class DetailActivity extends BaseActivity implements TabLayout.OnTabSelec
         Object tag = tab.getTag();
 
         mCurrentPage = mDetailAdapter.getPageIndexForTag(tag);
-        mViewPager.setCurrentItem(mCurrentPage);
+        if (mCurrentPage == ReviewFragment.INDEX || mCurrentPage == StatsFragment.INDEX) {
+            Toast.makeText(this, R.string.coming_soon, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        mViewPager.setCurrentItem(0);
     }
 
     @Override

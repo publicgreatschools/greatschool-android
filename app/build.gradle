@@ -37,17 +37,10 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.debugConfig
-            minifyEnabled false
-            shrinkResources false
-            testCoverageEnabled false
         }
 
         release {
             signingConfig signingConfigs.releaseConfig
-            minifyEnabled true
-            shrinkResources true
-            testCoverageEnabled false
-            proguardFile file('proguard-78377-308.pro')
         }
     }
 }

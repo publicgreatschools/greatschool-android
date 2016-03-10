@@ -68,7 +68,7 @@ public class NearbyFragment extends TabbedFragment implements View.OnClickListen
         TextView schoolDes = (TextView) view.findViewById(R.id.school_des);
         schoolDes.setText(Html.fromHtml(getString(R.string.school_des)));
 
-        mExplore = (Button) view.findViewById(R.id.explore);
+        mExplore = (Button) view.findViewById(R.id.explore_button);
         mHomeStart = (ViewGroup) view.findViewById(R.id.home_start);
         mHomeFullScreen = (ViewGroup) view.findViewById(R.id.home_fullscreen);
         mExplore.setOnClickListener(this);
@@ -90,10 +90,9 @@ public class NearbyFragment extends TabbedFragment implements View.OnClickListen
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.explore:
+            case R.id.explore_button:
                 showHomeFullScreen();
                 break;
-
             default:
 
                 break;
