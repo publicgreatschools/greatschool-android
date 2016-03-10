@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
-            android:src="@mipmap/nearby_title"/>
+            android:src="@mipmap/logo"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -93,15 +93,12 @@
             android:layout_centerVertical="true"
             android:gravity="center"
             android:orientation="vertical"
-            android:paddingTop="50dp">
+            android:paddingTop="80dp">
 
-            <TextView
-                android:id="@+id/school_size"
-                android:layout_width="wrap_content"
+            <ImageView
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
-                android:text="30"
-                android:textColor="@android:color/white"
-                android:textSize="120sp"/>
+                android:src="@mipmap/size"/>
 
             <com.greatschool.android.ui.common.font.TypefacedTextView
                 android:id="@+id/school_des"

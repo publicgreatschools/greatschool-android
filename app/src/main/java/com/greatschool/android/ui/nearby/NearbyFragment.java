@@ -75,12 +75,12 @@ public class NearbyFragment extends TabbedFragment implements View.OnClickListen
 
         mAssignedSchoolLayout = (LinearLayout) view.findViewById(R.id.assigned_schools);
 
-        mSchoolSizeView = (TextView) view.findViewById(R.id.school_size);
-
-        Shader textShader = new LinearGradient(0, 0, 30, 400,
-                new int[]{Color.WHITE, Color.LTGRAY},
-                new float[]{0, 1}, Shader.TileMode.CLAMP);
-        mSchoolSizeView.getPaint().setShader(textShader);
+//        mSchoolSizeView = (TextView) view.findViewById(R.id.school_size);
+//
+//        Shader textShader = new LinearGradient(0, 0, 30, 400,
+//                new int[]{Color.WHITE, Color.LTGRAY},
+//                new float[]{0, 1}, Shader.TileMode.CLAMP);
+//        mSchoolSizeView.getPaint().setShader(textShader);
 
         mHomeStart.setVisibility(View.VISIBLE);
         mHomeFullScreen.setVisibility(View.GONE);
