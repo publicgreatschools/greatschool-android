@@ -112,8 +112,8 @@
 
         <ImageView
             android:id="@+id/detail_header_icon"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
             android:src="@mipmap/detail_header_icon"/>
