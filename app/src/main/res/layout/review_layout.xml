@@ -10,8 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp">
+        android:paddingBottom="30dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
 
 
         <LinearLayout
@@ -30,6 +31,7 @@
                     android:layout_centerVertical="true"
                     android:text="@string/total_review"
                     android:textColor="#888889"
+                    android:textSize="12sp"
                     font:typeface="proxima_nova_semibold"/>
 
                 <com.greatschool.android.ui.common.font.TypefacedTextView

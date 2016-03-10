@@ -15,7 +15,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="8dp"
         android:background="@mipmap/overlay3"/>
 
     <View
@@ -34,8 +34,8 @@
         android:layout_marginTop="25dp"
         android:background="@mipmap/overlay_blank1"
         android:orientation="vertical"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp">
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp">
 
 
         <RelativeLayout
@@ -65,7 +65,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="40dp">
 
             <com.greatschool.android.ui.common.font.TypefacedTextView
                 android:id="@+id/review_date1"

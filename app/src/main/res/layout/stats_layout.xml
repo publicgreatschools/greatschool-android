@@ -1,44 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:font="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#F0F5F6">
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F5F6">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="30dp"
+        android:paddingBottom="30dp"
         android:layout_marginTop="12dp"
         android:orientation="vertical">
 
         <com.greatschool.android.ui.common.font.TypefacedTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
             android:text="@string/detail_overview"
             android:textColor="#888889"
+            android:textSize="12sp"
             font:typeface="proxima_nova_semibold"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:background="@drawable/school_item"
             android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="52dp"
                 android:paddingRight="15dp">
 
                 <ImageView
                     android:id="@+id/art_icon"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
                     android:layout_centerVertical="true"
                     android:scaleType="center"
                     android:src="@mipmap/art"/>
@@ -72,13 +74,13 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="52dp"
                 android:paddingRight="15dp">
 
                 <ImageView
                     android:id="@+id/chess_icon"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
                     android:layout_centerVertical="true"
                     android:scaleType="center"
                     android:src="@mipmap/chess"/>
@@ -112,13 +114,13 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="52dp"
                 android:paddingRight="15dp">
 
                 <ImageView
                     android:id="@+id/sport_icon"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
                     android:layout_centerVertical="true"
                     android:scaleType="center"
                     android:src="@mipmap/art"/>
@@ -152,13 +154,13 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="52dp"
                 android:paddingRight="15dp">
 
                 <ImageView
                     android:id="@+id/world_icon"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
                     android:layout_centerVertical="true"
                     android:scaleType="center"
                     android:src="@mipmap/language"/>
@@ -190,10 +192,11 @@
         <com.greatschool.android.ui.common.font.TypefacedTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="12dp"
             android:layout_marginBottom="-8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
             android:text="@string/test_scores"
+            android:textSize="12sp"
             android:textColor="#888889"
             font:typeface="proxima_nova_semibold"/>
 
@@ -214,11 +217,13 @@
         <com.greatschool.android.ui.common.font.TypefacedTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="20dp"
             android:layout_marginBottom="-8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
             android:text="HOMES IN THE SCHOOL DISTRICT"
             android:textColor="#888889"
+            android:textSize="12sp"
             font:typeface="proxima_nova_semibold"/>
 
         <include layout="@layout/review_overlay3"></include>
@@ -226,9 +231,10 @@
         <com.greatschool.android.ui.common.font.TypefacedTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
             android:text="DISCRIPTION"
+            android:textSize="12sp"
             android:textColor="#888889"
             font:typeface="proxima_nova_semibold"/>
 
@@ -236,15 +242,13 @@
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:background="@drawable/school_item"
-            android:padding="20dp"
+            android:padding="15dp"
             android:text="@string/description"
-            android:textColor="#888889"
-            font:typeface="proxima_nova_semibold"/>
-
+            font:typeface="proxima_nova_regular"/>
 
     </LinearLayout>
 
