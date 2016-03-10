@@ -1,8 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:background="#E9EEEF"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:font="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/school_bg"
+                android:orientation="vertical">
 
-</LinearLayout>
+
+    <com.greatschool.android.ui.common.font.TypefacedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/my_school"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        font:typeface="proxima_nova_bold"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+        <com.greatschool.android.ui.common.font.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/coming_soon"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            font:typeface="proxima_nova_bold"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

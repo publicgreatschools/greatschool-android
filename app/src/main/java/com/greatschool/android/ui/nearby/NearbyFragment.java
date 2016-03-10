@@ -1,8 +1,5 @@
 package com.greatschool.android.ui.nearby;
 
-import android.graphics.Color;
-import android.graphics.LinearGradient;
-import android.graphics.Shader;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.Html;
@@ -26,7 +23,6 @@ public class NearbyFragment extends TabbedFragment implements View.OnClickListen
 
     public static final int INDEX = 0;
     private Button mExplore;
-    private TextView mSchoolSizeView;
     private ViewGroup mHomeStart, mHomeFullScreen;
     private LinearLayout mAssignedSchoolLayout;
 
@@ -74,13 +70,6 @@ public class NearbyFragment extends TabbedFragment implements View.OnClickListen
         mExplore.setOnClickListener(this);
 
         mAssignedSchoolLayout = (LinearLayout) view.findViewById(R.id.assigned_schools);
-
-//        mSchoolSizeView = (TextView) view.findViewById(R.id.school_size);
-//
-//        Shader textShader = new LinearGradient(0, 0, 30, 400,
-//                new int[]{Color.WHITE, Color.LTGRAY},
-//                new float[]{0, 1}, Shader.TileMode.CLAMP);
-//        mSchoolSizeView.getPaint().setShader(textShader);
 
         mHomeStart.setVisibility(View.VISIBLE);
         mHomeFullScreen.setVisibility(View.GONE);

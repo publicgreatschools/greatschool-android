@@ -82,12 +82,6 @@ public class HomeActivity extends BaseActivity implements TabLayout.OnTabSelecte
         Object tag = tab.getTag();
 
         mCurrentPage = mHomePagerAdapter.getPageIndexForTag(tag);
-
-        if (mCurrentPage == MySchoolFragment.INDEX || mCurrentPage == GreatKidFragment.INDEX) {
-            Toast.makeText(this, R.string.coming_soon, Toast.LENGTH_SHORT).show();
-            return;
-        }
-
         mViewPager.setCurrentItem(mCurrentPage);
     }
 

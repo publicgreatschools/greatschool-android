@@ -47,7 +47,7 @@
     <string name="favorite">Favorite</string>
     <string name="detail_header_title">College Park High School</string>
     <string name="detail_overview">DETAILS OVERVIEW</string>
-    <string name="coming_soon">Coming soon!</string>
+    <string name="coming_soon">Coming Soon!</string>
     <string name="art"><![CDATA[Art & Music]]></string>
     <string name="chess">Chess</string>
     <string name="sports">Sports</string>
@@ -59,4 +59,5 @@
     <string name="review_info2">The administration at this school is an embarrassment. The level of incompetency is monumental. The fact that the students succeed at all is due entirely to the many excellent teachers and parental involvement.</string>
     <string name="review_info3">I\'ve only been going to College Park for a week now and I already love the school! Not only do the teachers care, but the electives they offer are more than I\'ve ever seen!</string>
     <string name="description">In 2014-2015 California used the California Standard Tests (CSTs) to test students in science in grades 5,8 and 10,. The CSTs are standards-based tests, which means they measure how well students are mastering specific skills defined for each grade...More</string>
+    <string name="greate_kid">GreatKids</string>
 </resources>
