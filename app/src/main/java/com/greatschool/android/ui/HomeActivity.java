@@ -82,7 +82,7 @@ public class HomeActivity extends BaseActivity implements TabLayout.OnTabSelecte
         Object tag = tab.getTag();
 
         mCurrentPage = mHomePagerAdapter.getPageIndexForTag(tag);
-        mViewPager.setCurrentItem(mCurrentPage);
+        mViewPager.setCurrentItem(mCurrentPage, false);
     }
 
     @Override
