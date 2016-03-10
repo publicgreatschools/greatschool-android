@@ -8,7 +8,7 @@
     <string name="distance">DISTANCE</string>
     <string name="az">A-Z</string>
     <string name="ratings">RATINGS</string>
-    <string name="school_des"><![CDATA[<font color="#FFFFFF">SCHOOLS IN THIS</font> <u><font color="#B8E986">NEIGHBORHOOD</font></u>]]></string>
+    <string name="school_des"><![CDATA[<font color="#FFFFFF">SCHOOLS IN THIS</font> <font color="#B8E986">NEIGHBORHOOD</font>]]></string>
     <string name="pick_school">Pick a School</string>
     <string name="assigned_schools">ASSIGNED SCHOOLS</string>
     <string name="elementary_school">ELEMENTARY SCHOOLS</string>
