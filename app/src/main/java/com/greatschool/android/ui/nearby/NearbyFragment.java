@@ -165,7 +165,12 @@ public class NearbyFragment extends TabbedFragment implements View.OnClickListen
         Application application = Application.getInstance();
         School[] schools = application.getSchools();
 
+        int i = 0;
         for (School school : schools) {
+            if (i >= 3) {
+                break;
+            }
+            i++;
             SchoolItem schoolItem = new SchoolItem(getContext(), false);
             schoolItem.create(school);
             mAssignedSchoolLayout.addView(schoolItem);

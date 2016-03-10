@@ -3,7 +3,7 @@
     "name": "School Name A",
     "info": "Public | 9 - 12 | Pleasant Hill, CA",
     "location" : "Pleasant Hill, CA",
-    "distance": 3.25,
+    "distance": 1.25,
     "score": 9,
     "review": 314,
     "reviewScore": 4.3
@@ -12,8 +12,8 @@
     "name": "School Name B",
     "info": "Public | 9 - 12 | Pleasant Hill, CA",
     "location" : "Pleasant Hill, CA",
-    "distance": 3.15,
-    "score": 9,
+    "distance": 2.15,
+    "score": 7,
     "review": 211,
     "reviewScore": 4.3
   },
@@ -30,7 +30,7 @@
     "name": "School Name D",
     "info": "Public | 9 - 12 | Pleasant Hill, CA",
     "location" : "Pleasant Hill, CA",
-    "distance": 1.45,
+    "distance": 4.45,
     "score": 2,
     "review": 142,
     "reviewScore": 4.3
@@ -39,8 +39,53 @@
     "name": "School Name E",
     "info": "Public | 9 - 12 | Pleasant Hill, CA",
     "location" : "Pleasant Hill, CA",
-    "distance": 4.45,
+    "distance": 5.45,
+    "score": 8,
+    "review": 222,
+    "reviewScore": 4.3
+  },
+  {
+    "name": "School Name F",
+    "info": "Public | 9 - 12 | Pleasant Hill, CA",
+    "location" : "Pleasant Hill, CA",
+    "distance": 6.45,
     "score": 7,
+    "review": 222,
+    "reviewScore": 4.3
+  },
+  {
+    "name": "School Name G",
+    "info": "Public | 9 - 12 | Pleasant Hill, CA",
+    "location" : "Pleasant Hill, CA",
+    "distance": 7.45,
+    "score": 5,
+    "review": 222,
+    "reviewScore": 4.3
+  },
+  {
+    "name": "School Name H",
+    "info": "Public | 9 - 12 | Pleasant Hill, CA",
+    "location" : "Pleasant Hill, CA",
+    "distance": 8.45,
+    "score": 9,
+    "review": 222,
+    "reviewScore": 4.3
+  },
+  {
+    "name": "School Name I",
+    "info": "Public | 9 - 12 | Pleasant Hill, CA",
+    "location" : "Pleasant Hill, CA",
+    "distance": 9.45,
+    "score": 4,
+    "review": 222,
+    "reviewScore": 4.3
+  },
+  {
+    "name": "School Name J",
+    "info": "Public | 9 - 12 | Pleasant Hill, CA",
+    "location" : "Pleasant Hill, CA",
+    "distance": 10.45,
+    "score": 3,
     "review": 222,
     "reviewScore": 4.3
   }

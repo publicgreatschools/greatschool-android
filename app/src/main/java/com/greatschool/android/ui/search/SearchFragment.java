@@ -132,28 +132,28 @@ public class SearchFragment extends TabbedFragment implements TabLayout.OnTabSel
             @Override
             public void onClick(View v) {
 
-                clear();
-
-                if (mShownListView) {
-                    mLocation.setImageResource(R.mipmap.school_view);
-                    mMapLayout.setVisibility(View.VISIBLE);
-                    mTabLayout.setVisibility(View.GONE);
-                    mViewPager.setVisibility(View.GONE);
-
-                    mHandler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            loadLocationInMap();
-                        }
-                    }, 200);
-                } else {
-                    mLocation.setImageResource(R.mipmap.search_location);
-                    mMapLayout.setVisibility(View.GONE);
-                    mTabLayout.setVisibility(View.VISIBLE);
-                    mViewPager.setVisibility(View.VISIBLE);
-                }
-
-                mShownListView = !mShownListView;
+//                clear();
+//
+//                if (mShownListView) {
+//                    mLocation.setImageResource(R.mipmap.school_view);
+//                    mMapLayout.setVisibility(View.VISIBLE);
+//                    mTabLayout.setVisibility(View.GONE);
+//                    mViewPager.setVisibility(View.GONE);
+//
+//                    mHandler.postDelayed(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            loadLocationInMap();
+//                        }
+//                    }, 200);
+//                } else {
+//                    mLocation.setImageResource(R.mipmap.search_location);
+//                    mMapLayout.setVisibility(View.GONE);
+//                    mTabLayout.setVisibility(View.VISIBLE);
+//                    mViewPager.setVisibility(View.VISIBLE);
+//                }
+//
+//                mShownListView = !mShownListView;
             }
         });
 
