@@ -17,6 +17,39 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    signingConfigs {
+        debugConfig {
+            storeFile file("debug.jks")
+            storePassword "greatschool"
+            keyAlias "com.greatschool.android"
+            keyPassword "greatschool"
+        }
+
+        releaseConfig {
+            storeFile file("release.jks")
+            storePassword "greatschool"
+            keyAlias "com.greatschool.android"
+            keyPassword "greatschool"
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debugConfig
+            minifyEnabled false
+            shrinkResources false
+            testCoverageEnabled false
+        }
+
+        release {
+            signingConfig signingConfigs.releaseConfig
+            minifyEnabled true
+            shrinkResources true
+            testCoverageEnabled false
+            proguardFile file('proguard-78377-308.pro')
+        }
+    }
 }
 
 dependencies {
